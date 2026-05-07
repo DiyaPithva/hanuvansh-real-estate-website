@@ -1,0 +1,42 @@
+[
+  {
+    "id": "test-001",
+    "clientName": "Rajesh Patel",
+    "clientTitle": "Managing Director, Patel Industries",
+    "message": "Jay Mehta and the Hanuvansh team transformed what could have been a stressful property search into an extraordinary experience. Their market knowledge is unparalleled, and their commitment to finding the perfect property — not just any property — is what sets them apart.",
+    "rating": 5,
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+  },
+  {
+    "id": "test-002",
+    "clientName": "Priya Sharma",
+    "clientTitle": "CEO, Sharma Ventures",
+    "message": "I've worked with many real estate consultants across India, but Hanuvansh Estate stands in a league of its own. The attention to detail, the curated property selection, and the post-purchase support are simply exceptional. This is what luxury service looks like.",
+    "rating": 5,
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"
+  },
+  {
+    "id": "test-003",
+    "clientName": "Amit Desai",
+    "clientTitle": "Founder, Desai Group",
+    "message": "When I decided to invest in Ahmedabad's premium real estate market, Jay Mehta was the only consultant I trusted. His insights into market trends, his network, and his genuine care for client outcomes are remarkable. My portfolio has grown significantly under his guidance.",
+    "rating": 5,
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80"
+  },
+  {
+    "id": "test-004",
+    "clientName": "Meera Joshi",
+    "clientTitle": "Architect & Interior Designer",
+    "message": "As someone who works in the built environment, I have extremely high standards for property quality. Hanuvansh Estate not only met those standards — they exceeded them. The Skyline Penthouse they found for me is beyond anything I imagined possible.",
+    "rating": 5,
+    "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"
+  },
+  {
+    "id": "test-005",
+    "clientName": "Vikram Mehta",
+    "clientTitle": "NRI Investor, London",
+    "message": "Managing property investments from abroad is challenging, but Hanuvansh Estate made it seamless. Their transparency, regular updates, and deep understanding of the Ahmedabad market gave me complete confidence. I've recommended them to every NRI I know.",
+    "rating": 5,
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80"
+  }
+]

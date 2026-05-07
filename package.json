@@ -1,0 +1,15 @@
+{
+  "name": "hanuvansh-mern-estate",
+  "version": "2.0.0",
+  "description": "HANUVANSH ESTATE CONSULTANT — Premium Luxury Real Estate Platform",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm run start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
