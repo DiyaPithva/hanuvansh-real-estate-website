@@ -482,7 +482,7 @@ export default function FounderPage() {
           >
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919106788526"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-10 py-4 rounded-xl font-bold text-sm tracking-wide uppercase transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-bg-secondary text-white"

@@ -34,14 +34,14 @@ const ACHIEVEMENTS = [
 ];
 
 const FOUNDER_STATS = [
-  { value: '10+',  label: 'Years Experience' },
-  { value: '500+', label: 'Deals Closed' },
-  { value: '1000+', label: 'Clients Served' },
+  { value: '2+',      label: 'Years Experience'  },
+  { value: '500+',    label: 'Deals Closed'      },
+  { value: '50+',     label: 'Clients Served'    },
   { value: '₹500Cr+', label: 'Transaction Value' },
 ];
 
 export default function FounderPage() {
-  const waLink = `https://wa.me/919876543210?text=${encodeURIComponent('Hi Jay, I\'d like to connect regarding a property enquiry.')}`;
+  const waLink = `https://wa.me/919106788526?text=${encodeURIComponent('Hi Jay, I\'d like to connect regarding a property enquiry.')}`;
 
   return (
     <div className="bg-cream">
@@ -201,8 +201,12 @@ export default function FounderPage() {
       </section>
 
       {/* ── Connect ─────────────────────────────────────────────────── */}
-      <section className="section bg-ink text-white">
-        <div className="wrap">
+      <section className="section relative overflow-hidden"
+        style={{ background: 'linear-gradient(135deg, #fffaf5 0%, #fff4e8 50%, #fff1e0 100%)' }}>
+        {/* Soft ambient glow */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true"
+          style={{ background: 'radial-gradient(ellipse 60% 55% at 50% 50%, rgba(255,122,0,0.07) 0%, transparent 70%)' }} />
+        <div className="wrap relative z-10">
           <motion.div
             variants={stagger}
             initial="hidden"
@@ -211,10 +215,12 @@ export default function FounderPage() {
             className="text-center max-w-xl mx-auto"
           >
             <motion.span variants={fade} className="eyebrow">Get in Touch</motion.span>
-            <motion.h2 variants={fade} className="font-heading font-bold text-white text-3xl lg:text-4xl mb-4">
+            <motion.h2 variants={fade} className="font-heading font-bold text-3xl lg:text-4xl mb-4"
+              style={{ color: '#0b0b2d' }}>
               Connect with Jay
             </motion.h2>
-            <motion.p variants={fade} className="font-body text-white/60 text-base leading-relaxed mb-8">
+            <motion.p variants={fade} className="font-body text-base leading-relaxed mb-8"
+              style={{ color: '#5f6475' }}>
               Whether you're looking for your dream home or a sound investment, Jay is available for a personal consultation.
             </motion.p>
             <motion.div variants={fade} className="flex flex-wrap gap-3 justify-center">
@@ -222,14 +228,21 @@ export default function FounderPage() {
                 href={waLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-body font-semibold text-sm px-6 py-3 rounded-sm bg-[#25D366] text-white hover:bg-[#1ebe5d] transition-colors duration-200"
+                className="inline-flex items-center gap-2 font-body font-semibold text-sm px-6 py-3 rounded-xl text-white transition-all duration-300"
+                style={{ background: 'linear-gradient(135deg, #FF6B00, #F97316)', boxShadow: '0 4px 16px rgba(255,107,0,0.28)' }}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(255,107,0,0.38)'; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(255,107,0,0.28)'; }}
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                 </svg>
                 WhatsApp
               </a>
-              <Link to="/contact" className="btn-accent">
+              <Link to="/contact"
+                className="inline-flex items-center gap-2 font-body font-semibold text-sm px-6 py-3 rounded-xl transition-all duration-200"
+                style={{ background: 'white', color: '#ff6b00', border: '1.5px solid rgba(255,107,0,0.28)', boxShadow: '0 2px 10px rgba(0,0,0,0.06)' }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,107,0,0.5)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,107,0,0.28)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
                 Contact Us
               </Link>
             </motion.div>

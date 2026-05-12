@@ -126,7 +126,7 @@ function InquiryForm({ property }) {
   const waMsg = encodeURIComponent(
     `Hi, I'm interested in ${property?.name || 'a property'} (${property?.location || ''}).\n\nCould you please share more details?`
   );
-  const waLink = `https://wa.me/919876543210?text=${waMsg}`;
+  const waLink = `https://wa.me/919106788526?text=${waMsg}`;
 
   if (success) {
     return (

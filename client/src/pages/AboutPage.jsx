@@ -41,10 +41,10 @@ const VALUES = [
 ];
 
 const STATS = [
-  { value: '10+',  label: 'Years in Business' },
-  { value: '500+', label: 'Properties Sold' },
+  { value: '2+',      label: 'Years in Business' },
+  { value: '500+',    label: 'Properties Sold'   },
   { value: '₹500Cr+', label: 'Transaction Value' },
-  { value: '1000+', label: 'Happy Clients' },
+  { value: '50+',     label: 'Happy Clients'     },
 ];
 
 export default function AboutPage() {
@@ -195,8 +195,19 @@ export default function AboutPage() {
       </section>
 
       {/* ── Founder Teaser ──────────────────────────────────────────── */}
-      <section className="section bg-ink text-white">
-        <div className="wrap">
+      <section className="section relative overflow-hidden"
+        style={{ background: 'linear-gradient(135deg, #fffaf5 0%, #fff4e8 50%, #fff1e0 100%)' }}>
+        {/* Soft ambient glow */}
+        <div className="absolute pointer-events-none" aria-hidden="true"
+          style={{ width: 500, height: 500, top: '-10%', right: '-5%',
+            background: 'radial-gradient(circle, rgba(255,122,0,0.09) 0%, transparent 65%)',
+            filter: 'blur(60px)' }} />
+        <div className="absolute pointer-events-none" aria-hidden="true"
+          style={{ width: 350, height: 350, bottom: '-10%', left: '-5%',
+            background: 'radial-gradient(circle, rgba(255,107,0,0.07) 0%, transparent 65%)',
+            filter: 'blur(50px)' }} />
+
+        <div className="wrap relative z-10">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <motion.div
               variants={stagger}
@@ -205,13 +216,16 @@ export default function AboutPage() {
               viewport={{ once: true }}
             >
               <motion.span variants={fade} className="eyebrow">Meet Our Founder</motion.span>
-              <motion.h2 variants={fade} className="font-heading font-bold text-white text-3xl lg:text-4xl mb-4">
+              <motion.h2 variants={fade} className="font-heading font-bold text-3xl lg:text-4xl mb-4"
+                style={{ color: '#0b0b2d' }}>
                 Jay Mehta
               </motion.h2>
-              <motion.p variants={fade} className="font-body text-accent text-sm mb-6 tracking-wide">
+              <motion.p variants={fade} className="font-body text-sm mb-6 tracking-wide font-semibold"
+                style={{ color: '#ff7a00' }}>
                 Founder & Principal Consultant
               </motion.p>
-              <motion.p variants={fade} className="font-body text-white/60 text-base leading-relaxed">
+              <motion.p variants={fade} className="font-body text-base leading-relaxed"
+                style={{ color: '#5f6475' }}>
                 With over a decade of experience navigating Ahmedabad's premium real estate landscape, Jay Mehta has built Hanuvansh Estate Consultant on the pillars of trust, integrity, and a genuine commitment to client success. His vision has shaped the firm into what it is today.
               </motion.p>
             </motion.div>
@@ -224,10 +238,15 @@ export default function AboutPage() {
               className="flex lg:justify-end"
             >
               <div className="text-center lg:text-right">
-                <p className="font-body text-white/50 text-sm mb-6 max-w-xs lg:ml-auto">
+                <p className="font-body text-sm mb-6 max-w-xs lg:ml-auto"
+                  style={{ color: '#8a8fa8' }}>
                   Discover the vision, achievements, and philosophy behind Hanuvansh Estate Consultant.
                 </p>
-                <Link to="/founder" className="btn-accent">
+                <Link to="/founder"
+                  className="inline-flex items-center gap-2 font-body font-semibold text-sm px-6 py-3 rounded-xl text-white transition-all duration-300"
+                  style={{ background: 'linear-gradient(135deg, #FF6B00, #F97316)', boxShadow: '0 4px 16px rgba(255,107,0,0.28)' }}
+                  onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(255,107,0,0.38)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(255,107,0,0.28)'; }}>
                   View Full Profile
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7" />

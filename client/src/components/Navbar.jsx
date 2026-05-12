@@ -14,7 +14,7 @@ const LINKS = [
   { label: 'Contact',    to: '/contact' },
 ];
 
-const WHATSAPP = 'https://wa.me/919876543210?text=Hello%2C%20I%20am%20interested%20in%20a%20property.';
+const WHATSAPP = 'https://wa.me/919106788526?text=Hello%2C%20I%20am%20interested%20in%20a%20property.';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -97,7 +97,7 @@ export default function Navbar() {
             {/* Desktop CTAs */}
             <div className="hidden lg:flex items-center gap-2.5 shrink-0">
               <a
-                href="tel:+919876543210"
+                href="tel:+919106788526"
                 className="flex items-center gap-1.5 font-body text-[12.5px] font-medium text-ink-3 transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-orange-50"
                 style={{ color: '#4B5563' }}
                 onMouseEnter={e => { e.currentTarget.style.color = '#f97316'; }}
@@ -198,7 +198,7 @@ export default function Navbar() {
                 </svg>
                 WhatsApp Enquiry
               </a>
-              <a href="tel:+919876543210"
+              <a href="tel:+919106788526"
                 className="mt-3 flex items-center justify-center gap-2 py-3 rounded-xl text-saffron font-semibold text-sm border-2 border-saffron-4 hover:border-saffron transition-colors"
                 style={{ borderColor: 'rgba(249,115,22,0.28)' }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(249,115,22,0.55)'; }}

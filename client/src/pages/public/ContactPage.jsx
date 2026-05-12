@@ -21,7 +21,7 @@ const CONTACT_INFO = {
   address: 'Ahmedabad, Gujarat, India',
 };
 
-const WHATSAPP_URL = 'https://wa.me/919876543210';
+const WHATSAPP_URL = 'https://wa.me/919106788526';
 
 const SOCIAL_LINKS = [
   {
