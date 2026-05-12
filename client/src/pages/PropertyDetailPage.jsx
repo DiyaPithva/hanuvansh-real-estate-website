@@ -318,14 +318,14 @@ export default function PropertyDetailPage() {
             <span className="text-border">›</span>
             <Link to="/properties" className="hover:text-accent transition-colors">Properties</Link>
             <span className="text-border">›</span>
-            <span className="text-ink-3 line-clamp-1">{property.name}</span>
+            <span className="text-ink-3 line-clamp-1 max-w-[180px] sm:max-w-none">{property.name}</span>
           </nav>
         </div>
       </div>
 
       {/* ── Main Content ────────────────────────────────────────────── */}
-      <div className="wrap py-12">
-        <div className="grid lg:grid-cols-[3fr_2fr] gap-10 items-start">
+      <div className="wrap py-8 lg:py-12">
+        <div className="grid lg:grid-cols-[3fr_2fr] gap-8 lg:gap-10 items-start">
 
           {/* ── Left: Details ─────────────────────────────────────── */}
           <motion.div variants={fade} initial="hidden" animate="visible">
@@ -335,7 +335,7 @@ export default function PropertyDetailPage() {
               {/* Main image */}
               <div
                 className="relative overflow-hidden rounded-sm cursor-pointer group"
-                style={{ height: '280px' }}
+                style={{ height: 'clamp(200px, 45vw, 280px)' }}
                 onClick={() => openLightbox(activeImg)}
               >
                 <img

@@ -49,7 +49,7 @@ export default function FounderPage() {
       {/* ── Page Header ─────────────────────────────────────────────── */}
       <div className="bg-white border-b border-border pt-24 pb-10">
         <div className="wrap">
-          <nav className="flex items-center gap-2 font-body text-xs text-muted mb-5">
+          <nav className="flex items-center flex-wrap gap-2 font-body text-xs text-muted mb-5">
             <Link to="/" className="hover:text-accent transition-colors">Home</Link>
             <span className="text-border">›</span>
             <Link to="/about" className="hover:text-accent transition-colors">About</Link>
@@ -188,8 +188,8 @@ export default function FounderPage() {
             <div className="text-center mb-8">
               <span className="eyebrow">In His Own Words</span>
             </div>
-            <blockquote className="border-l-4 border-accent pl-8 py-2">
-              <p className="font-heading italic text-ink text-xl lg:text-2xl leading-relaxed mb-6">
+            <blockquote className="border-l-4 border-accent pl-4 sm:pl-8 py-2">
+              <p className="font-heading italic text-ink text-lg lg:text-2xl leading-relaxed mb-6">
                 "Real estate is not about square footage or price per square foot. It is about finding the right home for the right family, at the right time — and doing so with complete honesty. That is the only way to build a business that lasts."
               </p>
               <footer className="font-body text-sm text-muted">

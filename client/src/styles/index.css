@@ -11,6 +11,7 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
   body {
@@ -18,6 +19,7 @@
     color: #1A1A2E;
     font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.65;
+    overflow-x: hidden;
   }
 
   ::selection {
@@ -362,5 +364,49 @@
   @keyframes ticker-scroll {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+  }
+}
+
+/* ── Mobile Responsive Overrides ───────────────────────────────────── */
+@media (max-width: 1023px) {
+  /* Hero section: remove horizontal overflow from glow orbs */
+  .hero-glow-orb {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Ensure wrap has proper mobile padding */
+  .wrap {
+    @apply px-4;
+  }
+
+  /* Section vertical padding reduction on mobile */
+  .section {
+    @apply py-14;
+  }
+
+  /* Ticker: ensure it doesn't cause overflow */
+  .ticker-track {
+    animation-duration: 28s;
+  }
+
+  /* Property card images: ensure full width */
+  .prop-card img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens: reduce section padding further */
+  .section {
+    @apply py-10;
+  }
+
+  /* Eyebrow badge: prevent overflow */
+  .eyebrow {
+    font-size: 9px;
+    padding: 6px 12px;
   }
 }

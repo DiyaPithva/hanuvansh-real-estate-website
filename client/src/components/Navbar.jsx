@@ -46,18 +46,18 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-[60px]">
 
             {/* Brand */}
-            <Link to="/" className="flex items-center gap-2.5 shrink-0">
+            <Link to="/" className="flex items-center gap-2.5 shrink-0 min-w-0">
               <div
-                className="w-8 h-8 rounded-lg flex items-center justify-center text-white font-heading font-bold text-sm"
+                className="w-8 h-8 rounded-lg flex items-center justify-center text-white font-heading font-bold text-sm flex-shrink-0"
                 style={{ background: 'linear-gradient(135deg, #fb923c, #f97316)', boxShadow: '0 2px 8px rgba(249,115,22,0.22)' }}
               >
                 H
               </div>
-              <div className="flex flex-col leading-none">
-                <span className="font-heading font-bold text-ink text-[14.5px] tracking-tight">
+              <div className="flex flex-col leading-none min-w-0">
+                <span className="font-heading font-bold text-ink text-[14.5px] tracking-tight truncate">
                   Hanuvansh
                 </span>
-                <span className="font-body text-[8.5px] font-semibold tracking-widest uppercase mt-0.5" style={{ color: '#f97316' }}>
+                <span className="font-body text-[8.5px] font-semibold tracking-widest uppercase mt-0.5 truncate" style={{ color: '#f97316' }}>
                   Estate Consultant
                 </span>
               </div>

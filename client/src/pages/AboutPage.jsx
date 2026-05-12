@@ -54,7 +54,7 @@ export default function AboutPage() {
       {/* ── Page Header ─────────────────────────────────────────────── */}
       <div className="bg-white border-b border-border pt-24 pb-10">
         <div className="wrap">
-          <nav className="flex items-center gap-2 font-body text-xs text-muted mb-5">
+          <nav className="flex items-center flex-wrap gap-2 font-body text-xs text-muted mb-5">
             <Link to="/" className="hover:text-accent transition-colors">Home</Link>
             <span className="text-border">›</span>
             <span className="text-ink-3">About Us</span>
@@ -238,20 +238,22 @@ export default function AboutPage() {
               className="flex lg:justify-end"
             >
               <div className="text-center lg:text-right">
-                <p className="font-body text-sm mb-6 max-w-xs lg:ml-auto"
+                <p className="font-body text-sm mb-6 max-w-xs mx-auto lg:ml-auto"
                   style={{ color: '#8a8fa8' }}>
                   Discover the vision, achievements, and philosophy behind Hanuvansh Estate Consultant.
                 </p>
-                <Link to="/founder"
-                  className="inline-flex items-center gap-2 font-body font-semibold text-sm px-6 py-3 rounded-xl text-white transition-all duration-300"
-                  style={{ background: 'linear-gradient(135deg, #FF6B00, #F97316)', boxShadow: '0 4px 16px rgba(255,107,0,0.28)' }}
-                  onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(255,107,0,0.38)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(255,107,0,0.28)'; }}>
-                  View Full Profile
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </Link>
+                <div className="flex justify-center lg:justify-end">
+                  <Link to="/founder"
+                    className="inline-flex items-center gap-2 font-body font-semibold text-sm px-6 py-3 rounded-xl text-white transition-all duration-300"
+                    style={{ background: 'linear-gradient(135deg, #FF6B00, #F97316)', boxShadow: '0 4px 16px rgba(255,107,0,0.28)' }}
+                    onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(255,107,0,0.38)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(255,107,0,0.28)'; }}>
+                    View Full Profile
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </motion.div>
           </div>

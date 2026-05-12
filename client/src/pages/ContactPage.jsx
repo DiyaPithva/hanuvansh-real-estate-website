@@ -78,7 +78,7 @@ export default function ContactPage() {
       {/* ── Page Header ─────────────────────────────────────────────── */}
       <div className="bg-white border-b border-border pt-24 pb-10">
         <div className="wrap">
-          <nav className="flex items-center gap-2 font-body text-xs text-muted mb-5">
+          <nav className="flex items-center flex-wrap gap-2 font-body text-xs text-muted mb-5">
             <Link to="/" className="hover:text-accent transition-colors">Home</Link>
             <span className="text-border">›</span>
             <span className="text-ink-3">Contact</span>
@@ -280,13 +280,13 @@ export default function ContactPage() {
         <iframe
           title="Hanuvansh Estate Consultant Location"
           width="100%"
-          height="400"
+          height="300"
           style={{ border: 0, display: 'block' }}
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
           src="https://www.google.com/maps?q=Satellite+Road,+Ahmedabad,+Gujarat&z=14&output=embed"
-          className="border border-border"
+          className="border border-border sm:h-[400px]"
         />
       </div>
 

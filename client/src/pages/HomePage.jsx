@@ -123,12 +123,12 @@ export default function HomePage() {
         ))}
 
         {/* ── Main container ── */}
-        <div className="relative z-10 w-full" style={{ maxWidth: 1380, margin: '0 auto', padding: '0 56px' }}>
-          <div className="flex items-center gap-10" style={{ minHeight: 'calc(100vh - 150px)' }}>
+        <div className="relative z-10 w-full px-4 md:px-8 lg:px-14" style={{ maxWidth: 1380, margin: '0 auto' }}>
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-10" style={{ minHeight: 'calc(100vh - 150px)', paddingTop: '80px', paddingBottom: '24px' }}>
 
             {/* ══════════════ LEFT COLUMN ══════════════ */}
             <motion.div variants={stagger} initial="hidden" animate="visible"
-              className="flex flex-col" style={{ flex: '0 0 46%', maxWidth: 555 }}>
+              className="w-full lg:flex-none flex flex-col items-center lg:items-start text-center lg:text-left" style={{ flex: '0 0 46%', maxWidth: 555 }}>
 
               {/* Badge */}
               <motion.div variants={fadeUp} style={{ marginBottom: 22 }}>
@@ -151,15 +151,15 @@ export default function HomePage() {
               {/* Heading — 3 lines matching reference */}
               <motion.h1 variants={fadeUp} className="font-heading"
                 style={{ fontWeight: 800, lineHeight: 1.03, letterSpacing: '-2px', color: '#0d102d', marginBottom: 0 }}>
-                <span style={{ display: 'block', fontSize: 'clamp(2.2rem,4.6vw,68px)' }}>Authorized Real</span>
-                <span style={{ display: 'block', fontSize: 'clamp(2.2rem,4.6vw,68px)' }}>
+                <span style={{ display: 'block', fontSize: 'clamp(1.8rem,6vw,68px)' }}>Authorized Real</span>
+                <span style={{ display: 'block', fontSize: 'clamp(1.8rem,6vw,68px)' }}>
                   Estate{' '}
                   <span style={{ background: 'linear-gradient(90deg,#ff6b00,#ffb347)',
                     WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                     Consultant
                   </span>
                 </span>
-                <span style={{ display: 'block', fontSize: 'clamp(2.2rem,4.6vw,68px)' }}>
+                <span style={{ display: 'block', fontSize: 'clamp(1.8rem,6vw,68px)' }}>
                   in{' '}
                   <span style={{ background: 'linear-gradient(90deg,#ff6b00,#ffb347)',
                     WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
@@ -169,7 +169,7 @@ export default function HomePage() {
               </motion.h1>
 
               {/* Category row */}
-              <motion.div variants={fadeUp} className="flex items-center flex-wrap gap-3" style={{ marginTop: 16, marginBottom: 12 }}>
+              <motion.div variants={fadeUp} className="flex items-center flex-wrap justify-center lg:justify-start gap-3" style={{ marginTop: 16, marginBottom: 12 }}>
                 {['Residential', 'Commercial', 'Investment Properties'].map((cat, i, arr) => (
                   <span key={cat} className="flex items-center gap-3">
                     <span className="font-body" style={{ fontSize: 12, fontWeight: 600, letterSpacing: '3px', textTransform: 'uppercase', color: '#4a4a6a' }}>{cat}</span>
@@ -180,16 +180,16 @@ export default function HomePage() {
 
               {/* Description */}
               <motion.p variants={fadeUp} className="font-body"
-                style={{ fontSize: 15.5, lineHeight: 1.65, maxWidth: 430, color: '#5f6675', marginBottom: 6 }}>
+                style={{ fontSize: 15.5, lineHeight: 1.65, maxWidth: 430, color: '#5f6675', marginBottom: 6, margin: '0 auto 6px auto' }}>
                 Helping clients discover premium properties with transparent consultation and trusted real estate expertise.
               </motion.p>
-              <motion.div variants={fadeUp} style={{ width: 42, height: 3, background: 'linear-gradient(90deg,#ff6b00,#ffb347)', borderRadius: 2, marginBottom: 22 }} />
+              <motion.div variants={fadeUp} style={{ width: 42, height: 3, background: 'linear-gradient(90deg,#ff6b00,#ffb347)', borderRadius: 2, marginBottom: 22, margin: '8px auto 22px auto' }} className="lg:mx-0" />
 
               {/* 3 CTA Buttons */}
-              <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-3">
+              <motion.div variants={fadeUp} className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3">
                 {/* WhatsApp */}
                 <a href={WHATSAPP} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-body font-semibold text-white transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 font-body font-semibold text-white transition-all duration-300 w-full sm:w-auto"
                   style={{ height: 50, padding: '0 20px', borderRadius: 16, fontSize: 14,
                     background: 'linear-gradient(135deg,#ff6b00,#ff9a3d)',
                     boxShadow: '0 6px 24px rgba(255,107,0,0.35)', whiteSpace: 'nowrap' }}
@@ -203,7 +203,7 @@ export default function HomePage() {
                 </a>
                 {/* Explore */}
                 <Link to="/properties"
-                  className="inline-flex items-center gap-2 font-body font-semibold transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 font-body font-semibold transition-all duration-300 w-full sm:w-auto"
                   style={{ height: 50, padding: '0 18px', borderRadius: 16, fontSize: 14,
                     background: 'white', color: '#ff6b00',
                     border: '1.5px solid rgba(255,107,0,0.28)',
@@ -221,7 +221,7 @@ export default function HomePage() {
                 </Link>
                 {/* Call */}
                 <a href="tel:+919106788526"
-                  className="inline-flex items-center gap-2 font-body font-semibold transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 font-body font-semibold transition-all duration-300 w-full sm:w-auto"
                   style={{ height: 50, padding: '0 18px', borderRadius: 16, fontSize: 14,
                     background: 'white', color: '#374151',
                     border: '1.5px solid rgba(0,0,0,0.12)',
@@ -236,7 +236,7 @@ export default function HomePage() {
               </motion.div>
 
               {/* Client avatars row */}
-              <motion.div variants={fadeUp} className="flex items-center gap-3" style={{ marginTop: 20 }}>
+              <motion.div variants={fadeUp} className="flex items-center justify-center lg:justify-start gap-3" style={{ marginTop: 20 }}>
                 <div className="flex">
                   {['#f97316','#fb923c','#fdba74','#fed7aa'].map((bg, i) => (
                     <div key={i} style={{ width: 34, height: 34, borderRadius: '50%',
@@ -274,7 +274,7 @@ export default function HomePage() {
 
             {/* ══════════════ RIGHT COLUMN ══════════════ */}
             <motion.div variants={fadeRight} initial="hidden" animate="visible"
-              className="relative flex-1" style={{ minHeight: 500, position: 'relative' }}>
+              className="relative flex-1 w-full" style={{ minHeight: 300, position: 'relative' }}>
 
               {/* Orange glow blob behind image */}
               <div className="absolute pointer-events-none" aria-hidden="true"
@@ -284,8 +284,8 @@ export default function HomePage() {
 
               {/* Property image */}
               <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.4, ease: 'easeOut' }}
-                style={{ width: '84%', height: 470, marginLeft: '8%', borderRadius: 32,
-                  overflow: 'hidden', position: 'relative',
+                className="relative overflow-hidden"
+                style={{ width: '84%', height: 'clamp(260px,40vw,470px)', marginLeft: '8%', borderRadius: 32,
                   border: '2.5px solid rgba(255,255,255,0.88)',
                   boxShadow: '0 24px 80px rgba(255,107,0,0.22),0 8px 32px rgba(0,0,0,0.13)' }}>
                 {/* Warm amber base — shows while image loads */}
@@ -301,6 +301,7 @@ export default function HomePage() {
 
               {/* Floating card 1 — top-left: Years of Experience */}
               <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0 }}
+                className="hidden lg:block"
                 style={{ position: 'absolute', top: '8%', left: '2%', zIndex: 10,
                   background: 'white', borderRadius: 20, padding: '14px 18px',
                   boxShadow: '0 8px 32px rgba(0,0,0,0.13)', minWidth: 130 }}>
@@ -322,6 +323,7 @@ export default function HomePage() {
 
               {/* Floating card 2 — top-right: Happy Clients */}
               <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+                className="hidden lg:block"
                 style={{ position: 'absolute', top: '5%', right: '-4%', zIndex: 10,
                   background: 'white', borderRadius: 20, padding: '14px 18px',
                   boxShadow: '0 8px 32px rgba(0,0,0,0.13)', minWidth: 155 }}>
@@ -359,6 +361,7 @@ export default function HomePage() {
 
               {/* Floating card 3 — bottom-left: Transparent Process */}
               <motion.div animate={{ y: [0, -7, 0] }} transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+                className="hidden lg:block"
                 style={{ position: 'absolute', bottom: '14%', left: '3%', zIndex: 10,
                   background: 'white', borderRadius: 20, padding: '16px 18px',
                   boxShadow: '0 8px 32px rgba(0,0,0,0.13)', minWidth: 140 }}>
@@ -375,6 +378,7 @@ export default function HomePage() {
 
               {/* Floating card 4 — bottom-right: Residential Projects */}
               <motion.div animate={{ y: [0, -9, 0] }} transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+                className="hidden lg:block"
                 style={{ position: 'absolute', bottom: '9%', right: '-4%', zIndex: 10,
                   background: 'white', borderRadius: 20, padding: '16px 18px',
                   boxShadow: '0 8px 32px rgba(0,0,0,0.13)', minWidth: 140 }}>
@@ -397,9 +401,9 @@ export default function HomePage() {
 
           {/* ══════════════ STATS BAR ══════════════ */}
           <motion.div variants={fadeUp} initial="hidden" animate="visible"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0"
             style={{ margin: '24px 0 32px 0', background: 'white', borderRadius: 24,
-              boxShadow: '0 8px 40px rgba(0,0,0,0.08)', padding: '18px 36px',
-              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              boxShadow: '0 8px 40px rgba(0,0,0,0.08)', padding: '18px 24px',
               border: '1px solid rgba(255,107,0,0.07)' }}>
             {[
               { icon: '🏢', n: '500+',  l: 'Properties Sold'      },
@@ -417,7 +421,7 @@ export default function HomePage() {
                   <p className="font-body" style={{ fontSize: 11, color: '#6b7280', marginTop: 2 }}>{l}</p>
                 </div>
                 {i < arr.length - 1 && (
-                  <div style={{ width: 1, height: 40, background: 'rgba(0,0,0,0.08)', marginLeft: 20, flexShrink: 0 }} aria-hidden="true" />
+                  <div className="hidden lg:block" style={{ width: 1, height: 40, background: 'rgba(0,0,0,0.08)', marginLeft: 20, flexShrink: 0 }} aria-hidden="true" />
                 )}
               </div>
             ))}
@@ -429,21 +433,23 @@ export default function HomePage() {
         <div style={{ position: 'fixed', bottom: 28, right: 24, zIndex: 50, display: 'flex', flexDirection: 'column', gap: 10 }}>
           <motion.a href={WHATSAPP} target="_blank" rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}
-            style={{ width: 50, height: 50, borderRadius: '50%', background: '#25d366',
+            className="w-11 h-11 lg:w-[50px] lg:h-[50px]"
+            style={{ borderRadius: '50%', background: '#25d366',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               boxShadow: '0 4px 20px rgba(37,211,102,0.45)' }} aria-label="WhatsApp">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
               <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.845L.057 23.882l6.198-1.625A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.003-1.368l-.36-.214-3.68.965.981-3.595-.234-.369A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
             </svg>
           </motion.a>
           <motion.a href="tel:+919106788526"
             whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}
-            style={{ width: 50, height: 50, borderRadius: '50%',
+            className="w-11 h-11 lg:w-[50px] lg:h-[50px]"
+            style={{ borderRadius: '50%',
               background: 'linear-gradient(135deg,#ff6b00,#ff9a3d)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               boxShadow: '0 4px 20px rgba(255,107,0,0.45)' }} aria-label="Call Now">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
             </svg>
           </motion.a>
